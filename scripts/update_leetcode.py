@@ -21,7 +21,7 @@ def get_leetcode_stats(username):
     
     response = requests.post("https://leetcode.com/graphql", json={"query": query})
     data = response.json()
-    solved = data["data"]["matchedUser"]["submitStatsGlobal"]["acSubmissionNum"]
+    solved = data["data"]["matchedUser"]["submitStatsGlobal"]["acSubmissionNum"][1:]
     ranking = data["data"]["matchedUser"]["profile"]["ranking"]
     return {
         "total": sum(item["count"] for item in solved),
@@ -35,7 +35,8 @@ stats = get_leetcode_stats("Ilia_Kurdyukov")
 
 mermaid_diagram = f"""
 ```mermaid
-pie title LeetCode (Всего: {stats['total']})
+%%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#1CBAC8', 'pie2': '#FEB700', 'pie3': '#F63737' }, 'config': {'width': 300, 'height': 200}}}%%
+pie title Решено задач: {stats['total']}
     "Easy" : {stats['easy']}
     "Medium" : {stats['medium']}
     "Hard" : {stats['hard']}
@@ -52,7 +53,7 @@ with open("README.md", "r") as f:
 
 new_content = content.replace(
     "<!-- LEETCODE_STATS -->", 
-    f"<!-- LEETCODE_STATS -->\n{mermaid_diagram}\n{leetcode_link}\n*Обновлено: {datetime.now().strftime('%d.%m.%Y %H:%M')}*"
+    f"<!-- LEETCODE_STATS -->\n{leetcode_link}\n{mermaid_diagram}\n*Обновлено: {datetime.now().strftime('%d.%m.%Y %H:%M')}*"
 )
 
 with open("README.md", "w") as f:
