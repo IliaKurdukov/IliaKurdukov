@@ -1,4 +1,4 @@
-name: 📈 Update LeetCode Stats
+name: 📈 Обновление статистики LeetCode
 on:
   schedule:
     - cron: '0 12 * * *'  # Ежедневно в 12:00 UTC
