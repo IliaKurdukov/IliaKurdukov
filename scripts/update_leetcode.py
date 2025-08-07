@@ -18,34 +18,21 @@ def get_leetcode_stats(username):
     }
     """ % username
     
-    try:
-        response = requests.post("https://leetcode.com/graphql", json={"query": query}, headers={"Content-Type": "application/json"})
-        response.raise_for_status()
-        data = response.json()
-        
-        if "errors" in data:
-            raise ValueError(f"LeetCode API error: {data['errors'][0]['message']}")
-            
-        solved = data["data"]["matchedUser"]["submitStatsGlobal"]["acSubmissionNum"]
-        ranking = data["data"]["matchedUser"]["profile"]["ranking"]
-        
-        return {
-            "total": sum(item["count"] for item in solved),
-            "easy": solved[0]["count"],
-            "medium": solved[1]["count"],
-            "hard": solved[2]["count"],
-            "ranking": ranking
-        }
-        
-    except Exception as e:
-        print(f"Error fetching LeetCode stats: {e}")
-        return None
+    response = requests.post("https://leetcode.com/graphql", json={"query": query})
+    data = response.json()
+    solved = data["data"]["matchedUser"]["submitStatsGlobal"]["acSubmissionNum"]
+    ranking = data["data"]["matchedUser"]["profile"]["ranking"]
+    return {
+        "total": sum(item["count"] for item in solved),
+        "easy": solved[0]["count"],
+        "medium": solved[1]["count"],
+        "hard": solved[2]["count"],
+        "ranking": ranking
+    }
 
-def update_readme(stats):
-    if not stats:
-        return False
+stats = get_leetcode_stats("Ilia_Kurdyukov")
 
-    mermaid_diagram = f"""
+mermaid_diagram = f"""
 ```mermaid
 pie title LeetCode (Всего: {stats['total']})
     "Easy" : {stats['easy']}
@@ -54,40 +41,50 @@ pie title LeetCode (Всего: {stats['total']})
 ```
 """
 
-    leetcode_profile = f"""
-[![LeetCode](https://img.shields.io/badge/LeetCode-Профиль-FFA116?style=flat&logo=leetcode)](https://leetcode.com/{username}/)
-**Ранг**: {stats['ranking']:,} (топ {max(1, int(stats['ranking']/10000))}%) 
+leetcode_profile = f"""
+[![LeetCode](https://img.shields.io/badge/LeetCode-Профиль-FFA116?style=flat&logo=leetcode)](https://leetcode.com/Ilia_Kurdyukov/)
+**Ранг**: {stats['ranking']:,} (топ {max(1, int(stats['ranking']/10000)}%) 
 """
 
-    timestamp = datetime.now().strftime('%d.%m.%Y %H:%M')
+with open("README.md", "r") as f:
+    content = f.read()
 
-    try:
-        with open("README.md", "r", encoding="utf-8") as f:
-            content = f.read()
+new_content = content.replace(
+    "<!-- LEETCODE_STATS -->", 
+    f"<!-- LEETCODE_STATS -->\n{mermaid_diagram}\n{leetcode_profile}\n*Обновлено: {datetime.now().strftime('%d.%m.%Y %H:%M')}*"
+)
 
-        new_content = content.replace(
-            "<!-- LEETCODE_STATS -->", 
-            f"<!-- LEETCODE_STATS -->\n{mermaid_diagram}\n{leetcode_profile}\n*Обновлено: {timestamp}*"
-        )
+with open("README.md", "w") as f:
+    f.write(new_content)
+```
 
-        with open("README.md", "w", encoding="utf-8") as f:
-            f.write(new_content)
-            
-        return True
-        
-    except Exception as e:
-        print(f"Error updating README: {e}")
-        return False
+---
 
-if __name__ == "__main__":
-    username = "Ilia_Kurdyukov"
-    stats = get_leetcode_stats(username)
-    
-    if stats:
-        success = update_readme(stats)
-        if success:
-            print("README updated successfully!")
-        else:
-            print("Failed to update README")
-    else:
-        print("Failed to fetch LeetCode stats")
+### 2. `.github/workflows/update_leetcode.yml`  
+**Содержание:**  
+```yaml
+name: Update LeetCode Stats
+on:
+  schedule:
+    - cron: '0 12 * * *'  # Ежедневно в 12:00 UTC
+  workflow_dispatch:       # Ручной запуск
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run script
+        run: python scripts/update_leetcode.py
+      - name: Commit changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git add README.md
+          git commit -m "Auto: Update LeetCode stats"
+          git push
