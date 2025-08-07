@@ -55,3 +55,7 @@ pie title Решено задач: 11
 
 *Обновлено: 07.08.2025 12:28*
 <!-- LEETCODE_STATS_END -->
+
+## 📫 Контакты 
+- Telegram: [@ilia_kurdukov](https://t.me/ilia_kurdukov)  
+- Почта: 79817899982@ya.ru
