@@ -56,23 +56,32 @@ leetcode_link = f"""
 with open("README.md", "r") as f:
     content = f.read()
 
-# Разделяем содержимое на части до и после блока статистики
-parts = content.split("<!-- LEETCODE_STATS -->")
+# Разделяем содержимое на части
+start_marker = "<!-- LEETCODE_STATS -->"
+end_marker = "<!-- LEETCODE_STATS_END -->"
 
-# Сохраняем часть ДО блока и ПОСЛЕ блока (если есть)
-before_content = parts[0]
-after_content = parts[2] if len(parts) > 2 else ""
+# Находим позиции маркеров
+start_pos = content.find(start_marker)
+end_pos = content.find(end_marker)
 
-# Собираем новое содержимое с обновленной статистикой
-new_content = (
-    before_content + 
-    "<!-- LEETCODE_STATS -->\n" +
-    leetcode_link + "\n" +
-    mermaid_diagram + "\n" +
-    f"*Обновлено: {datetime.now().strftime('%d.%m.%Y %H:%M')}*\n" +
-    "<!-- LEETCODE_STATS_END -->" +
-    after_content
-)
+if start_pos != -1 and end_pos != -1:
+    # Сохраняем части до и после блока статистики
+    before_content = content[:start_pos]
+    after_content = content[end_pos + len(end_marker):]
+    
+    # Собираем новое содержимое
+    new_content = (
+        before_content +
+        start_marker + "\n" +
+        leetcode_link + "\n" +
+        mermaid_diagram + "\n" +
+        f"*Обновлено: {datetime.now().strftime('%d.%m.%Y %H:%M')}*\n" +
+        end_marker +
+        after_content
+    )
+else:
+    # Если маркеров нет, добавляем блок в конец
+    new_content = content + "\n" + start_marker + "\n" + leetcode_link + "\n" + mermaid_diagram + "\n" + f"*Обновлено: {datetime.now().strftime('%d.%m.%Y %H:%M')}*\n" + end_marker
 
 with open("README.md", "w") as f:
     f.write(new_content)
