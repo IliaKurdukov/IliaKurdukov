@@ -8,7 +8,7 @@
 
 ## 🛠️ Технологии и инструменты
 
-### 📊 Анализ данных и ML
+### 📊 Анализ данных
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white)
@@ -37,6 +37,10 @@
 ## 📊 Моя статистика GitHub  
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=IliaKurdukov&layout=compact)](https://github.com/IliaKurdukov)  
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=IliaKurdukov&show_icons=true)](https://github.com/IliaKurdukov)  
+
+## 🏆 LeetCode Статистика  
+<!-- LEETCODE_STATS -->  
+*Данные загружаются...*  
 
 ## 📫 Как со мной связаться  
 - Telegram: [@ilia_kurdukov](https://t.me/ilia_kurdukov)  
