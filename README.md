@@ -41,6 +41,20 @@
 ## 🏆 LeetCode статистика  
 <!-- LEETCODE_STATS -->
 
+[![LeetCode Profile](https://img.shields.io/badge/LeetCode-Профиль-FFA116?style=flat&logo=leetcode)](https://leetcode.com/Ilia_Kurdyukov/)
+**Ранг**: 4,480,950 (топ 448%) 
+
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#1CBAC8', 'pie2': '#FEB700', 'pie3': '#F63737' }, 'config': {'width': 300, 'height': 200}}}%%
+pie title Решено задач: 11
+   "Easy" : 7
+   "Medium" : 4
+   "Hard" : 0
+```
+
+*Обновлено: 07.08.2025 11:55*
+
 ```mermaid
 pie title LeetCode (Всего: 22)
     "Easy" : 11
