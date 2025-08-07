@@ -39,7 +39,20 @@
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=IliaKurdukov&show_icons=true)](https://github.com/IliaKurdukov)  
 
 ## 🏆 LeetCode Статистика  
-<!-- LEETCODE_STATS -->  
+<!-- LEETCODE_STATS -->
+
+```mermaid
+pie title LeetCode (Всего: 22)
+    "Easy" : 11
+    "Medium" : 7
+    "Hard" : 4
+```
+
+
+[![LeetCode Profile](https://img.shields.io/badge/LeetCode-Профиль-FFA116?style=flat&logo=leetcode)](https://leetcode.com/Ilia_Kurdyukov/)
+**Ранг**: 5,000,001 (топ 500%) 
+
+*Обновлено: 07.08.2025 10:24*  
 *Данные загружаются...*  
 
 ## 📫 Как со мной связаться  
