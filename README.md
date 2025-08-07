@@ -1,4 +1,4 @@
-# Привет! Я Илья Курдюков 👋
+# Привет! Я Курдюков Илья 👋
 
 ## 👨‍💻 Обо мне
 - Дата аналитик/Продуктовый аналитик 
@@ -34,11 +34,11 @@
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 ![Google Colab](https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)
 
-## 📊 Моя статистика GitHub  
+## 📊 GitHub статистика
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=IliaKurdukov&layout=compact)](https://github.com/IliaKurdukov)  
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=IliaKurdukov&show_icons=true)](https://github.com/IliaKurdukov)  
 
-## 🏆 LeetCode Статистика  
+## 🏆 LeetCode статистика  
 <!-- LEETCODE_STATS -->
 
 ```mermaid
@@ -52,9 +52,8 @@ pie title LeetCode (Всего: 22)
 [![LeetCode Profile](https://img.shields.io/badge/LeetCode-Профиль-FFA116?style=flat&logo=leetcode)](https://leetcode.com/Ilia_Kurdyukov/)
 **Ранг**: 5,000,001 (топ 500%) 
 
-*Обновлено: 07.08.2025 10:24*  
-*Данные загружаются...*  
+*Обновлено: 07.08.2025 10:24*   
 
-## 📫 Как со мной связаться  
+## 📫 Контакты 
 - Telegram: [@ilia_kurdukov](https://t.me/ilia_kurdukov)  
 - Почта: 79817899982@ya.ru  
