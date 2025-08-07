@@ -1,3 +1,4 @@
+import os
 import requests
 from datetime import datetime
 
@@ -41,9 +42,9 @@ pie title LeetCode (Всего: {stats['total']})
 ```
 """
 
-leetcode_profile = f"""
-[![LeetCode](https://img.shields.io/badge/LeetCode-Профиль-FFA116?style=flat&logo=leetcode)](https://leetcode.com/Ilia_Kurdyukov/)
-**Ранг**: {stats['ranking']:,} (топ {max(1, int(stats['ranking']/10000)}%) 
+leetcode_link = f"""
+[![LeetCode Profile](https://img.shields.io/badge/LeetCode-Профиль-FFA116?style=flat&logo=leetcode)](https://leetcode.com/Ilia_Kurdyukov/)
+**Ранг**: {stats['ranking']:,} (топ {int(stats['ranking']/10000)}%) 
 """
 
 with open("README.md", "r") as f:
@@ -51,40 +52,8 @@ with open("README.md", "r") as f:
 
 new_content = content.replace(
     "<!-- LEETCODE_STATS -->", 
-    f"<!-- LEETCODE_STATS -->\n{mermaid_diagram}\n{leetcode_profile}\n*Обновлено: {datetime.now().strftime('%d.%m.%Y %H:%M')}*"
+    f"<!-- LEETCODE_STATS -->\n{mermaid_diagram}\n{leetcode_link}\n*Обновлено: {datetime.now().strftime('%d.%m.%Y %H:%M')}*"
 )
 
 with open("README.md", "w") as f:
     f.write(new_content)
-```
-
----
-
-### 2. `.github/workflows/update_leetcode.yml`  
-**Содержание:**  
-```yaml
-name: Update LeetCode Stats
-on:
-  schedule:
-    - cron: '0 12 * * *'  # Ежедневно в 12:00 UTC
-  workflow_dispatch:       # Ручной запуск
-
-jobs:
-  update:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      - name: Install dependencies
-        run: pip install requests
-      - name: Run script
-        run: python scripts/update_leetcode.py
-      - name: Commit changes
-        run: |
-          git config --global user.name "GitHub Actions"
-          git add README.md
-          git commit -m "Auto: Update LeetCode stats"
-          git push
