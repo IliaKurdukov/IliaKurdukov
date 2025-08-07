@@ -48,18 +48,30 @@ pie title Решено задач: {total}
    hard=stats['hard']
 )
 
-
 leetcode_link = f"""
 [![LeetCode Profile](https://img.shields.io/badge/LeetCode-Профиль-FFA116?style=flat&logo=leetcode)](https://leetcode.com/Ilia_Kurdyukov/)
-**Ранг**: {stats['ranking']:,} (топ {int(stats['ranking']/10000)}%) 
+**Ранг**: {'{0:,}'.format(stats['ranking']).replace(',', ' ')} 
 """
 
 with open("README.md", "r") as f:
     content = f.read()
 
-new_content = content.replace(
-    "<!-- LEETCODE_STATS -->", 
-    f"<!-- LEETCODE_STATS -->\n{leetcode_link}\n{mermaid_diagram}\n*Обновлено: {datetime.now().strftime('%d.%m.%Y %H:%M')}*"
+# Разделяем содержимое на части до и после блока статистики
+parts = content.split("<!-- LEETCODE_STATS -->")
+
+# Сохраняем часть ДО блока и ПОСЛЕ блока (если есть)
+before_content = parts[0]
+after_content = parts[2] if len(parts) > 2 else ""
+
+# Собираем новое содержимое с обновленной статистикой
+new_content = (
+    before_content + 
+    "<!-- LEETCODE_STATS -->\n" +
+    leetcode_link + "\n" +
+    mermaid_diagram + "\n" +
+    f"*Обновлено: {datetime.now().strftime('%d.%m.%Y %H:%M')}*\n" +
+    "<!-- LEETCODE_STATS_END -->" +
+    after_content
 )
 
 with open("README.md", "w") as f:
