@@ -47,13 +47,13 @@
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#1CBAC8', 'pie2': '#FEB700', 'pie3': '#F63737' }, 'config': {'width': 300, 'height': 200}}}%%
-pie title Решено задач: 13
+pie title Решено задач: 14
    "Easy" : 7
    "Medium" : 5
-   "Hard" : 1
+   "Hard" : 2
 ```
 
-*Обновлено: 08.08.2025 12:32*
+*Обновлено: 08.08.2025 17:40*
 <!-- LEETCODE_STATS_END -->
 
 ## 📫 Контакты 
