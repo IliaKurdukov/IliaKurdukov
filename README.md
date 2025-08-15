@@ -1,10 +1,16 @@
-# Привет! Я Курдюков Илья 👋
+# Привет 👋 Я Курдюков Илья 
 
 ## 👨‍💻 Обо мне
-- Дата аналитик/Продуктовый аналитик 
-- Опыт работы с 2023 года
-- Закончил ТГУ по направлению "Прикладная информатика"  
-- Ищу работу аналитиком данных/продуктовым аналитиком 
+- Аналитик данных НИЛ эрозии русловых процессов МГУ
+<!-- EXPERIENCE_START -->
+*Опыт загружается...*
+<!-- EXPERIENCE_END -->
+- Ищу работу аналитиком данных/продуктовым аналитиком
+
+## 🎓 Образование
+
+[![ТГУ](https://img.shields.io/badge/ТГУ-Магистр_ПИ-0055A4?logo=university)]()
+[![Яндекс Практикум](https://img.shields.io/badge/Яндекс-Продуктовая_аналитика-FF0000?logo=yandex)]()
 
 ## 🛠️ Технологии и инструменты
 
@@ -16,12 +22,10 @@
 ![Seaborn](https://img.shields.io/badge/Seaborn-5B8FA8?style=for-the-badge)
 
 ### 📈 Машинное обучение  
-![Scikit-learn](https://img.shields.io/badge/Scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)  
-![CatBoost](https://img.shields.io/badge/CatBoost-00AEEF?style=for-the-badge)  
+![Scikit-learn](https://img.shields.io/badge/Scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white) ![CatBoost](https://img.shields.io/badge/CatBoost-00AEEF?style=for-the-badge)  
 
 ### 📊 BI и Визуализация  
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white)  
-![DataLens](https://img.shields.io/badge/Yandex_DataLens-FF0000?style=for-the-badge&logo=yandex&logoColor=white)  
+[![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white)](https://public.tableau.com/app/profile/ilia.kurdyukov) ![DataLens](https://img.shields.io/badge/Yandex_DataLens-FF0000?style=for-the-badge&logo=yandex&logoColor=white)  
 
 ### 📈 A/B-тестирование
 ![StatsModels](https://img.shields.io/badge/StatsModels-8C4CFC?style=for-the-badge)
@@ -35,15 +39,13 @@
 ![Google Colab](https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)
 
 ## 📊 GitHub статистика
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=IliaKurdukov&layout=compact)](https://github.com/IliaKurdukov)  
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=IliaKurdukov&show_icons=true)](https://github.com/IliaKurdukov)  
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=IliaKurdukov&layout=compact)](https://github.com/IliaKurdukov)   
 
 ## 🏆 LeetCode статистика  
 <!-- LEETCODE_STATS -->
 
 [![LeetCode Profile](https://img.shields.io/badge/LeetCode-Профиль-FFA116?style=flat&logo=leetcode)](https://leetcode.com/Ilia_Kurdyukov/)
 **Ранг**: 3 458 317 
-
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#1CBAC8', 'pie2': '#FEB700', 'pie3': '#F63737' }, 'config': {'width': 300, 'height': 200}}}%%
@@ -52,7 +54,6 @@ pie title Решено задач: 21
    "Medium" : 8
    "Hard" : 2
 ```
-
 *Обновлено: 15.08.2025 12:28*
 <!-- LEETCODE_STATS_END -->
 
