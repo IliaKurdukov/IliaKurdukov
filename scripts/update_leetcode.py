@@ -107,7 +107,7 @@ end_leetcode_pos = content.find(end_leetcode_marker)
 if start_exp_pos != -1 and end_exp_pos != -1 and start_leetcode_pos != -1 and end_leetcode_pos != -1:
     # Сохраняем части до и после блока статистики
     before_content = content[:start_exp_pos]
-    middle_content = content[(end_exp_marker  + len(end_exp_marker):start_leetcode_pos]
+    middle_content = content[(end_exp_marker  + len(end_exp_marker)):start_leetcode_pos]
     after_content = content[end_leetcode_pos + len(end_leetcode_marker):]
     
     # Собираем новое содержимое
