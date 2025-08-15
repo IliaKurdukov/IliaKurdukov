@@ -126,15 +126,16 @@ if start_exp_pos != -1 and end_exp_pos != -1 and start_leetcode_pos != -1 and en
     )
 else:
     # Если маркеров нет, добавляем блоки в конец
-    new_content = content + "\n" +
-    start_exp_marker + "\n" +
-    experience_block + "\n" +
-    end_exp_marker + "\n\n" +
-    start_leetcode_marker + "\n" +
-    leetcode_link + "\n" +
-    mermaid_diagram + "\n" +
-    f"Обновлено: {datetime.now().strftime('%d.%m.%Y %H:%M')}\n" +
-    end_leetcode_marker
+    new_content = (content + "\n" +
+        start_exp_marker + "\n" +
+        experience_block + "\n" +
+        end_exp_marker + "\n\n" +
+        start_leetcode_marker + "\n" +
+        leetcode_link + "\n" +
+        mermaid_diagram + "\n" +
+        f"Обновлено: {datetime.now().strftime('%d.%m.%Y %H:%M')}\n" +
+        end_leetcode_marker
+    )
 
 with open("README.md", "w") as f:
     f.write(new_content)
