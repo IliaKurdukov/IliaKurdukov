@@ -3,7 +3,7 @@
 ## 👨‍💻 Обо мне
 - Аналитик данных
 <!-- EXPERIENCE_START -->
-- Опыт работы: 1 год 5 месяцев
+- Опыт работы: 1 год 6 месяцев
 <!-- EXPERIENCE_END -->
 
 
@@ -50,13 +50,13 @@
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#1CBAC8', 'pie2': '#FEB700', 'pie3': '#F63737' }, 'config': {'width': 300, 'height': 200}}}%%
-pie title Решено задач: 187
-   "Easy" : 103
+pie title Решено задач: 188
+   "Easy" : 104
    "Medium" : 70
    "Hard" : 14
 ```
 
-*Обновлено: 31.10.2025 12:29*
+*Обновлено: 01.11.2025 12:25*
 <!-- LEETCODE_STATS_END -->
 
 ## 📫 Контакты 
