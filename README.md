@@ -45,18 +45,18 @@
 <!-- LEETCODE_STATS -->
 
 [![LeetCode Profile](https://img.shields.io/badge/LeetCode-Профиль-FFA116?style=flat&logo=leetcode)](https://leetcode.com/Ilia_Kurdyukov/)
-**Ранг**: 338 703 
+**Ранг**: 337 523 
 
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#1CBAC8', 'pie2': '#FEB700', 'pie3': '#F63737' }, 'config': {'width': 300, 'height': 200}}}%%
-pie title Решено задач: 362
+pie title Решено задач: 363
    "Easy" : 196
-   "Medium" : 142
+   "Medium" : 143
    "Hard" : 24
 ```
 
-*Обновлено: 27.04.2026 13:26*
+*Обновлено: 29.04.2026 13:43*
 <!-- LEETCODE_STATS_END -->
 
 ## 📫 Контакты 
