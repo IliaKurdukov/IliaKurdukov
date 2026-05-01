@@ -3,7 +3,7 @@
 ## 👨‍💻 Обо мне
 - Аналитик данных
 <!-- EXPERIENCE_START -->
-- Опыт работы: 1 год 11 месяцев
+- Опыт работы: 2 года
 <!-- EXPERIENCE_END -->
 
 
@@ -45,7 +45,7 @@
 <!-- LEETCODE_STATS -->
 
 [![LeetCode Profile](https://img.shields.io/badge/LeetCode-Профиль-FFA116?style=flat&logo=leetcode)](https://leetcode.com/Ilia_Kurdyukov/)
-**Ранг**: 337 675 
+**Ранг**: 337 832 
 
 
 ```mermaid
@@ -56,7 +56,7 @@ pie title Решено задач: 363
    "Hard" : 24
 ```
 
-*Обновлено: 30.04.2026 13:28*
+*Обновлено: 01.05.2026 13:06*
 <!-- LEETCODE_STATS_END -->
 
 ## 📫 Контакты 
