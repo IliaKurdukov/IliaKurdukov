@@ -45,7 +45,7 @@
 <!-- LEETCODE_STATS -->
 
 [![LeetCode Profile](https://img.shields.io/badge/LeetCode-Профиль-FFA116?style=flat&logo=leetcode)](https://leetcode.com/Ilia_Kurdyukov/)
-**Ранг**: 296 817 
+**Ранг**: 297 065 
 
 
 ```mermaid
@@ -56,7 +56,7 @@ pie title Решено задач: 407
    "Hard" : 27
 ```
 
-*Обновлено: 24.07.2026 13:23*
+*Обновлено: 25.07.2026 13:10*
 <!-- LEETCODE_STATS_END -->
 
 ## 📫 Контакты 
